@@ -12,7 +12,7 @@ const config = {
 
 module.exports = {
 	config: config,
-	onType: async function ({ usersData, message, event }) {
+	onType: async function ({ usersData, black, event }) {
 		const moment = require("moment-timezone");
 		const dateTime = moment.tz("Africa/Casablanca").format("DD/MM/YYYY");
 		const { senderID } = event;
