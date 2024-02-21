@@ -17,7 +17,7 @@ module.exports = {
 		const dateTime = moment.tz("Africa/Casablanca").format("DD/MM/YYYY");
 		const { senderID } = event;
 		const userData = await usersData.get(senderID);
-		if (userData.settings.daily === dateTime) return message.reply("انتظر للغد لتحصل على مكافئة جديدة");
+		if (userData.settings.daily === dateTime) return black.reply("انتظر للغد لتحصل على مكافئة جديدة");
 
 		const getCoin = Math.floor(Math.random() * 100);
 		const getExp = Math.floor(Math.random() * 500);
