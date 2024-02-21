@@ -52,12 +52,11 @@ function test(so) {
 if (so > 9)
 {
 const a = so.toString().split("");
+  a.reverse();
 let h = "";
-  let c = a.length;
 for (let i = 0 ; i < a.length ; i++)
 {
-h += `${Symms[a[c]]}`
-  c = c - 1
+h += `${Symms[a[i]]}`
 }
 return h;
 }
