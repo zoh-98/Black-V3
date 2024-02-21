@@ -42,7 +42,7 @@ module.exports.onType = async function({ args, black }) {
            await arr.push(b);
         }
         black.reply({
-            body: `خد لك صور (≧▽≦)`,
+            body: `⚝ ◄ تفضل ► ⚝`,
             attachment: arr
         })
     }
