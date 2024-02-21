@@ -11,7 +11,7 @@ module.exports = {
 	},
 
 	onType: async function ({ black, event, args, threadsData, api }) {
-		const { adminIDs } = await threadsData.getData(event.threadID);
+		const { adminIDs } = await threadsData.get(event.threadID);
 		if (!adminIDs.includes(api.getCurrentUserID()))
 			return black.reply("⚝ يجب على البوت ان يكون ادمن اولا ⚝");
 		async function kickAndCheckError(uid) {
