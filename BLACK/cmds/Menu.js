@@ -55,7 +55,7 @@ const a = so.toString().split("");
 let h = "";
 for (let i = 0 ; i < a.length ; i++)
 {
-h += `${Symms[i]}`
+h += `${Symms[a[i]]}`
 }
 return h;
 }
