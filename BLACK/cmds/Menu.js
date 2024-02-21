@@ -53,9 +53,11 @@ if (so > 9)
 {
 const a = so.toString().split("");
 let h = "";
+  let c = a.length;
 for (let i = 0 ; i < a.length ; i++)
 {
-h += `${Symms[a[i]]}`
+h += `${Symms[a[c]]}`
+  c = c - 1
 }
 return h;
 }
