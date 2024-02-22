@@ -41,7 +41,28 @@ if (event.senderID == config.OWNERID)
 }
 axios
   .request(options)
-  .then((response) => {
+  .then(async (response) => {
+    if (args.includes("صوت") || args.includes("اوديو") || args.includes("صوتك")) {
+      const tvm = response.data.google.generated_text;
+if (tvm.length > 412)
+{
+  let tvm1 = tvm.slice(0,tvm.length/2);
+  let tvm2 = tvm.slice(tvm.length/2);
+  try {
+  await black.reply({attachment: await funcs.str(`http://103.188.244.205:19505/tts?text=${encodeURIComponent(tvm1)}&model=10`)})
+  await black.reply({attachment: await funcs.str(`http://103.188.244.205:19505/tts?text=${encodeURIComponent(tvm2)}&model=10`)})
+  return;
+  } catch(e) {
+   return black.reply("ياااال عمي نصك طويييل قصر شويي") }
+} 
+else {
+  try {
+  return await black.reply({attachment: await funcs.str(`http://103.188.244.205:19505/tts?text=${encodeURIComponent(tvm)}&model=10`)})
+  } catch (e) {
+    black.reply("خطأ غير معروف")
+  }
+}
+    }
     black.reply(response.data.google.generated_text);
   })
   .catch((error) => {
