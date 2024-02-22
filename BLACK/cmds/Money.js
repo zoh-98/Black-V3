@@ -14,7 +14,7 @@ function delay(ms) {
   
 module.exports = {
   config: Black,
-  onType: async function({ api, event, args, black }) {
+  onType: async function({ api, event, args, black, usersData }) {
 
 
 const name = await usersData.getName(event.senderID);
@@ -27,7 +27,7 @@ const gender = {
 5:"🤡 🏳️‍🌈" ,
 6: "🤡🏳️‍🌈",
 }
- black.send(`⋆˚ مرحبا 𓆩⚝𓆪 ${name} 𓆩⚝𓆪`, async (err, hi) => { const { messageID} = hi;
+ black.reply(`⋆˚ مرحبا 𓆩⚝𓆪 ${name} 𓆩⚝𓆪`, async (err, hi) => { const { messageID} = hi;
 await delay(2000);
 api.editMessage(messageID, `⋆˚ مرحبا 𓆩⚝𓆪 ${name} 𓆩⚝𓆪
 
