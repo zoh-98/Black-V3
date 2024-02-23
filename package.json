@@ -54,6 +54,7 @@
     "ping-monitor": "^0.8.1",
     "pm2": "^5.1.0",
     "readline": "",
+    "replicate": "^0.27.1",
     "request": "^2.88.2",
     "safe-browse-url-lookup": "^0.1.1",
     "semver": "",
