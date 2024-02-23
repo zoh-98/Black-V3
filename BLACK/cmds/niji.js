@@ -14,6 +14,9 @@ module.exports = {
 	config: Black,
 	onType: async function ({ black, event, args }) {
        const bro = args.join(' ');
+       const replicate = new Replicate({
+        auth: "r8_Jsl94SnX5KIUygbPJKRBEgvdOpQo3Xh449Ebq",
+      });
        if (!bro) return black.reply('اكتب شي بعد الامر ヾ(⌐■_■)ノ♪');
        let brop = bro.split('-')
        let query = brop[0];
