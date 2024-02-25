@@ -7,7 +7,7 @@ module.exports = {
     name: "نيجي",
     Owner: "شادي",
     Auth: 0,
-    Hide: false,
+    Hide: true,
     Time: 0,
     Info: "رسم وتعديل الصور",
     Class: "ثريدز",
@@ -42,7 +42,7 @@ module.exports = {
                 return;
             }
   const startTime = new Date();         
-const pompt = await global.Mods.trgm(prompt, "en");
+const pompt = await global.funcs.trgm(prompt, "en");
 
             
 
@@ -80,4 +80,4 @@ const pompt = await global.Mods.trgm(prompt, "en");
 
 
 
-  }
+          }
