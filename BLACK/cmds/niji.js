@@ -1,5 +1,5 @@
 const Black = {
-	name: "نيجي",
+	name: "نيجيكس",
     Owner: "Gry KJ",
 	Time: 3,
 	Auth: 0,
