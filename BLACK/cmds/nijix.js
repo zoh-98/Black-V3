@@ -7,7 +7,7 @@ module.exports = {
     name: "نيجي",
     Owner: "شادي",
     Auth: 0,
-    Hide: true,
+    Hide: false,
     Time: 0,
     Info: "رسم وتعديل الصور",
     Class: "ثريدز",
