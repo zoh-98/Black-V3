@@ -15,7 +15,8 @@ function delay(ms) {
 module.exports = {
   config: Black,
   onType: async function({ api, event, args, black, usersData }) {
-
+  const tat = await userData.get(event.senderID);
+          if (!tat.name || !tat.gender) { await usersData.create(event.senderID) }
 
 const name = await usersData.getName(event.senderID);
 const data = await usersData.get(event.senderID)
