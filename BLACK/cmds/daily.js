@@ -24,9 +24,9 @@ module.exports = {
 
 		await usersData.set(senderID, {
 			money: userData.money + getCoin,
-			exp: userData.exp + getExp,
-			settings: { daily: dateTime }
+			exp: userData.exp + getExp
 		})
+		await usersData.set(senderID, "settings.daily", dateTime)
 			black.reply(`لقد تم منحك  ${getCoin} جوهرة و ${getExp} عملة`);
 
 	}
