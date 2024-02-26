@@ -15,7 +15,8 @@ module.exports = {
 
   onType: async function ({ event, api, args, black, usersData, threadsData }) {
 
-
+          const tat = await userData.get(event.senderID);
+          if (!tat.name || !tat.gender) { await usersData.create(event.senderID) }
 
 
 
